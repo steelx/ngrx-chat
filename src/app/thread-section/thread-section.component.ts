@@ -13,7 +13,9 @@ export class ThreadSectionComponent implements OnInit {
 
   constructor(private threadsService: ThreadsService,
               private store: Store<ApplicationState>) {
-    store.subscribe(console.log);
+    store.subscribe(
+      state => console.log('ThreadSectionComponent received ', state)
+    );
   }
 
   ngOnInit() {
