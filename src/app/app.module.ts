@@ -10,6 +10,7 @@ import { ThreadSectionComponent } from './thread-section/thread-section.componen
 import { MessageSectionComponent } from './message-section/message-section.component';
 import { ThreadListComponent } from './thread-list/thread-list.component';
 import { MessageListComponent } from './message-list/message-list.component';
+import {ThreadsService} from "./services/threads.service";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { MessageListComponent } from './message-list/message-list.component';
     HttpModule,
     StoreModule.provideStore({})
   ],
-  providers: [],
+  providers: [ThreadsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
